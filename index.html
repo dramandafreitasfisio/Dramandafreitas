@@ -1,652 +1,546 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AF Estética Avançada - Botox Premium</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Reset e Variáveis */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        :root {
-            --branco: #FFFFFF;
-            --off-white: #FAF9F6;
-            --escuro: #1A1A1A;
-            --cinza-leve: #F4F4F4;
-            --dourado-claro: #F3E5AB;
-            --dourado-principal: #D4AF37;
-            --dourado-profundo: #AA7C11;
-            --gradiente-dourado: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
-            --fonte-titulo: 'Playfair Display', serif;
-            --fonte-corpo: 'Montserrat', sans-serif;
-            --max-width: 1200px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: var(--fonte-corpo);
-            background-color: var(--branco);
-            color: var(--escuro);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+<title>AF Estética Avançada | Botox Premium</title>
 
-        /* Container global para centralização em Desktops */
-        .container {
-            width: 100%;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+<meta name="description" content="Realce sua beleza natural com aplicação de Botox na AF Estética Avançada. Agende sua avaliação personalizada com a Dra. Amanda Freitas.">
 
-        /* Header */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
-        }
-        .header-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 90px;
-        }
-        .logo {
-            font-family: var(--fonte-titulo);
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            background: var(--gradiente-dourado);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-        }
-        .nav-btn {
-            background: var(--gradiente-dourado);
-            color: var(--branco);
-            padding: 12px 28px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-        }
-        .nav-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-            filter: brightness(1.05);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://googleapis.com" rel="stylesheet">
 
-        /* Banner Principal (Hero) */
-        .hero {
-            position: relative;
-            background: linear-gradient(rgba(26, 26, 26, 0.65), rgba(26, 26, 26, 0.75)), 
-                        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
-            height: 100vh;
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            padding-top: 90px;
-        }
-        .hero-content {
-            max-width: 650px;
-            color: var(--branco);
-        }
-        .hero h1 {
-            font-family: var(--fonte-titulo);
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        .hero h1 span {
-            display: block;
-            font-weight: 600;
-            background: var(--gradiente-dourado);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 16px;
-            font-weight: 300;
-            margin-bottom: 35px;
-            color: rgba(255, 255, 255, 0.85);
-            letter-spacing: 0.5px;
-        }
+<style>
+:root {
+    --gold: #dfc18d;
+    --gold-dark: #aa8a52;
+    --gold-light: #f4e4c1;
+    --bg-dark: #0f0f11;
+    --bg-card: #16161a;
+    --white: #ffffff;
+    --text: #eaeaea;
+    --muted: #a19b91;
+    --green: #25d366;
+}
 
-        /* Seções Gerais */
-        section {
-            padding: 100px 0;
-        }
-        .section-title {
-            text-align: center;
-            font-family: var(--fonte-titulo);
-            font-size: 36px;
-            font-weight: 500;
-            margin-bottom: 50px;
-            letter-spacing: 1px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 2px;
-            background: var(--gradiente-dourado);
-            margin: 15px auto 0 auto;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Seção Promocional */
-        .promo-section {
-            background-color: var(--off-white);
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-        }
-        .promo-card {
-            background: var(--branco);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 8px;
-            padding: 50px 40px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.02);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .promo-badge {
-            font-family: var(--fonte-corpo);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--dourado-profundo);
-            background-color: rgba(212, 175, 55, 0.1);
-            padding: 6px 16px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .promo-card h3 {
-            font-family: var(--fonte-titulo);
-            font-size: 28px;
-            margin-bottom: 15px;
-            color: var(--escuro);
-        }
-        .promo-card p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
 
-        /* Benefícios */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1br);
-            gap: 30px;
-        }
-        /* Grid flexível fallback/ajuste */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        .benefit-item {
-            background: var(--branco);
-            padding: 40px 30px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            border-left: 3px solid var(--dourado-principal);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.01);
-        }
-        .benefit-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.08);
-        }
-        .benefit-item h4 {
-            font-family: var(--fonte-titulo);
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--escuro);
-        }
-        .benefit-item p {
-            font-size: 15px;
-            color: #666;
-            font-weight: 300;
-        }
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--bg-dark);
+    line-height: 1.7;
+}
 
-        /* Antes e Depois */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 40px;
-            justify-content: center;
-        }
-        .gallery-item {
-            background: var(--branco);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .gallery-images {
-            display: flex;
-            width: 100%;
-        }
-        .img-box {
-            width: 50%;
-            position: relative;
-        }
-        .img-box img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-        }
-        .img-label {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            background: rgba(26, 26, 26, 0.8);
-            color: var(--branco);
-            font-size: 12px;
-            padding: 4px 12px;
-            border-radius: 4px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .gallery-desc {
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 500;
-            color: #555;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--gold-light);
+}
 
-        /* Quem Somos */
-        .about-section {
-            background-color: var(--off-white);
-        }
-        .about-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-img {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-        .about-img::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            bottom: 15px;
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            pointer-events: none;
-        }
-        .about-img img {
-            width: 100%;
-            display: block;
-            height: 500px;
-            object-fit: cover;
-        }
-        .about-text h3 {
-            font-family: var(--fonte-titulo);
-            font-size: 32px;
-            color: var(--escuro);
-            margin-bottom: 20px;
-        }
-        .about-text p {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        /* FAQ */
-        .faq-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        details {
-            background: var(--branco);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 6px;
-            margin-bottom: 15px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-        details[open] {
-            border-color: var(--dourado-principal);
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.05);
-        }
-        summary {
-            font-family: var(--fonte-titulo);
-            font-size: 18px;
-            font-weight: 500;
-            padding: 15px 0;
-            cursor: pointer;
-            color: var(--escuro);
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        summary::after {
-            content: '+';
-            font-size: 22px;
-            color: var(--dourado-principal);
-            transition: transform 0.3s ease;
-        }
-        details[open] summary::after {
-            content: '−';
-        }
-        details p {
-            padding: 0 0 15px 0;
-            font-size: 15px;
-            color: #666;
-            font-weight: 300;
-        }
+button {
+    font-family: inherit;
+}
 
-        /* Rodapé */
-        footer {
-            background-color: var(--escuro);
-            color: var(--branco);
-            padding: 60px 0 30px 0;
-            border-top: 3px solid var(--dourado-principal);
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-logo h4 {
-            font-family: var(--fonte-titulo);
-            font-size: 22px;
-            letter-spacing: 1px;
-            background: var(--gradiente-dourado);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-        }
-        .footer-logo p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            font-weight: 300;
-        }
-        .footer-links h5 {
-            font-size: 16px;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            color: var(--dourado-claro);
-            text-transform: uppercase;
-        }
-        .footer-links p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 10px;
-            font-weight: 300;
-        }
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            background: transparent;
-            border: 1px solid var(--dourado-principal);
-            color: var(--dourado-claro);
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        .social-btn:hover {
-            background: var(--gradiente-dourado);
-            color: var(--branco);
-            border-color: transparent;
-            transform: translateY(-2px);
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 12px;
-            color: rgba(255,255,255,0.4);
-            font-weight: 300;
-        }
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
 
-        /* Botão Flutuante WhatsApp */
-        .whatsapp-fixed {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            z-index: 999;
-            transition: all 0.3s ease;
-            font-size: 30px;
-        }
-        .whatsapp-fixed:hover {
-            transform: scale(1.1);
-            background-color: #20ba5a;
-        }
+.section {
+    padding: 100px 0;
+}
 
-        /* Responsividade Avançada (Ajustes de Grid e Escalonamento) */
-        @media (max-width: 1024px) {
-            .hero h1 { font-size: 40px; }
-            .about-wrapper { grid-template-columns: 1fr; gap: 40px; }
-            .about-img img { height: 400px; }
-        }
-        @media (max-width: 768px) {
-            section { padding: 60px 0; }
-            .hero h1 { font-size: 32px; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .gallery-images { flex-direction: column; }
-            .img-box { width: 100%; }
-            .img-box img { height: 260px; }
-            .header-wrap { height: 80px; }
-            .logo { font-size: 20px; }
-            .nav-btn { padding: 10px 20px; font-size: 12px; }
-        }
-    </style>
-</head>
-<body>
+.section-title {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 45px;
+}
 
-    <!-- Header -->
-    <header>
-        <div class="container header-wrap">
-            <div class="logo">AF Estética Avançada</div>
-            <a href="https://wa.me/5561983295044?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20AF%20Estética%20Avançada." target="_blank" class="nav-btn">Agendar Avaliação</a>
-        </div>
-    </header>
+.section-title h2 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    margin: 12px 0 18px;
+}
 
-    <!-- Hero Banner -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Realce sua expressão com a <span>Toxina Botulínica</span></h1>
-                <p>Suavize linhas de expressão e previna marcas do tempo com um procedimento de precisão médica, focado em resultados naturais e elegantes.</p>
-                <a href="https://wa.me/5561983295044?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20AF%20Estética%20Avançada." target="_blank" class="nav-btn" style="padding: 16px 36px; font-size: 15px;">Quero Agendar Minha Avaliação</a>
-            </div>
-        </div>
-    </section>
+.section-title p {
+    color: var(--muted);
+}
 
-    <!-- Seção Promocional -->
-    <section class="promo-section">
-        <div class="container">
-            <div class="promo-card">
-                <span class="promo-badge">Oportunidade Especial</span>
-                <h3>Condições Exclusivas Este Mês</h3>
-                <p>Estamos com valores promocionais imperdíveis para o tratamento de Botox. Invista no seu autocuidado e garanta sua vaga com condições especiais por tempo limitado.</p>
-                <a href="https://wa.me/5561983295044?text=Olá!%20Quero%20aproveitar%20os%20valores%20promocionais%20do%20Botox." target="_blank" class="nav-btn">Consultar Condições Especiais</a>
-            </div>
-        </div>
-    </section>
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .75rem;
+    font-weight: 700;
+}
 
-    <!-- Benefícios -->
-    <section id="beneficios">
-        <div class="container">
-            <h2 class="section-title">Por que fazer o procedimento?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h4>Suavização de Rugas</h4>
-                    <p>Atenua as linhas dinâmicas na testa, glabela (entre as sobrancelhas) e os famosos "pés de galinha" ao redor dos olhos.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Prevenção Eficiente</h4>
-                    <p>Evita que as linhas de expressão se tornem marcas profundas e permanentes na pele com o passar dos anos.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Resultados Naturais</h4>
-                    <p>Aplicação moderna e estratégica que mantém a sua identidade e expressividade facial, sem o efeito "congelado".</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 3px;
+    border: 1px solid var(--gold);
+    background: var(--gold);
+    color: #0f0f11;
+    font-size: .88rem;
+    font-weight: 700;
+    letter-spacing: .3px;
+    transition: .3s;
+    cursor: pointer;
+}
 
-    <!-- Antes e Depois (Exemplos) -->
-    <section style="background-color: var(--off-white);">
-        <div class="container">
-            <h2 class="section-title">Resultados de Sucesso</h2>
-            <div class="gallery-grid">
-                <!-- Exemplo 1 -->
-                <div class="gallery-item">
-                    <div class="gallery-images">
-                        <div class="img-box">
-                            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600" alt="Antes">
-                            <span class="img-label">Antes</span>
-                        </div>
-                        <div class="img-box">
-                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600" alt="Depois">
-                            <span class="img-label">Depois</span>
-                        </div>
-                    </div>
-                    <div class="gallery-desc">Região da Testa e Glabela - Linhas Suavizadas</div>
-                </div>
-                <!-- Exemplo 2 -->
-                <div class="gallery-item">
-                    <div class="gallery-images">
-                        <div class="img-box">
-                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=600" alt="Antes">
-                            <span class="img-label">Antes</span>
-                        </div>
-                        <div class="img-box">
-                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600" alt="Depois">
-                            <span class="img-label">Depois</span>
-                        </div>
-                    </div>
-                    <div class="gallery-desc">Região dos Olhos - Redução Dinâmica Pró-Idade</div>
-                </div>
-            </div>
-        </div>
-    </section>
+.btn:hover {
+    background: var(--gold-dark);
+    border-color: var(--gold-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
 
-    <!-- Quem Somos -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-wrapper">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800" alt="Dra. Amanda Freitas">
-                </div>
-                <div class="about-text">
-                    <h3>Quem Somos</h3>
-                    <p>A <strong>AF Estética Avançada</strong> nasceu do desejo de unir ciência, alta tecnologia e arte para cuidar da sua autoestima de forma individualizada.</p>
-                    <p>Sob a liderança clínica da <strong>Dra. Amanda Freitas</strong>, priorizamos protocolos seguros e planejados meticulosamente para realçar a sua melhor versão, respeitando sempre a anatomia e a naturalidade de cada paciente.</p>
-                    <p>Aqui, cada linha é avaliada com critério clínico e sofisticação estética para proporcionar uma experiência confortável e resultados que trazem frescor e elegância ao rosto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.btn-outline {
+    background: transparent;
+    color: var(--gold-light);
+}
 
-    <!-- FAQ -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-wrapper">
-                <details>
-                    <summary>Quanto tempo dura o efeito do Botox?</summary>
-                    <p>O efeito costuma durar entre 3 a 6 meses, variando de acordo com o organismo de cada paciente, o estilo de vida e a musculatura facial.</p>
-                </details>
-                <details>
-                    <summary>O procedimento é doloroso?</summary>
-                    <p>A aplicação é rápida e muito tolerável. Utilizamos agulhas extremamente finas (de insulina) e anestésicos tópicos locais para garantir o máximo de conforto durante a sessão.</p>
-                </details>
-                <details>
-                    <summary>Vou ficar com o rosto congelado ou artificial?</summary>
-                    <p>Não. Na AF Estética Avançada trabalhamos com a técnica de dosagem estratégica e natural, relaxando apenas os músculos responsáveis pelas rugas de expressão indesejadas, sem tirar sua mímica natural.</p>
-                </details>
-                <details>
-                    <summary>Quanto tempo demora para aparecer o resultado?</summary>
-                    <p>Os primeiros efeitos começam a ser notados entre 48 a 72 horas após a aplicação. O resultado final e completo é atingido por volta do 14º ao 15º dia, momento em que realizamos a consulta de retorno.</p>
-                </details>
-                <details>
-                    <summary>Quais são os cuidados após a aplicação?</summary>
-                    <p>Recomenda-se não deitar-se nas primeiras 4 horas, evitar exercícios físicos intensos nas primeiras 24 horas e não massagear a região tratada para garantir que o produto atue exatamente no local planejado.</p>
-                </details>
-            </div>
-        </div>
-    </section>
+.btn-outline:hover {
+    background: var(--gold);
+    color: var(--bg-dark);
+}
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-logo">
-                <h4>AF Estética Avançada</h4>
-                <p>Especialistas em realçar sua beleza natural com sofisticação, segurança e alta performance estética.</p>
-            </div>
-            <div class="footer-links">
-                <h5>Atendimento</h5>
-                <p>WhatsApp: (61) 98329-5044</p>
-                <p>Brasília - DF</p>
-            </div>
-            <div class="footer-links">
-                <h5>Redes Sociais</h5>
-                <a href="https://instagram.com/dra_amandafreitas" target="_blank" class="social-btn">@dra_amandafreitas</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                &copy; 2026 AF Estética Avançada. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
+.topbar {
+    background: var(--gold-dark);
+    color: var(--bg-dark);
+    text-align: center;
+    padding: 9px 15px;
+    font-size: .78rem;
+    letter-spacing: .4px;
+    font-weight: 600;
+}
 
-    <!-- Botão Futuante WhatsApp (Ícone nativo de chat via caractere unicode ou estilo customizado) -->
-    <a href="https://wa.me/5561983295044?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20AF%20Estética%20Avançada." target="_blank" class="whatsapp-fixed" title="Fale Conosco">
-        <span style="font-family: Arial, sans-serif; font-weight: bold; font-size: 24px;">🗪</span>
-    </a>
+header {
+    height: 82px;
+    background: rgba(15, 15, 17, 0.95);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(223, 193, 141, 0.2);
+    backdrop-filter: blur(10px);
+}
 
-</body>
-</html>
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light);
+    font-size: 1.55rem;
+    line-height: 1.15;
+}
+
+.logo small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--muted);
+    font-size: .62rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    font-size: .84rem;
+}
+
+.nav-links a:not(.btn) {
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-links a:not(.btn):hover {
+    color: var(--gold);
+}
+
+/* HERO BANNER */
+.hero {
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 15, 17, 0.98) 0%,
+            rgba(15, 15, 17, 0.85) 45%,
+            rgba(15, 15, 17, 0.4) 100%
+        ),
+        url('https://unsplash.com')
+        center 35% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 590px;
+    padding: 85px 0;
+}
+
+.hero-label {
+    display: inline-block;
+    border: 1px solid rgba(223, 193, 141, 0.3);
+    color: var(--gold);
+    padding: 7px 14px;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    background: rgba(22, 22, 26, 0.6);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--white);
+    margin-bottom: 22px;
+    letter-spacing: -1px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 470px;
+    color: var(--text);
+    font-size: 1.02rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.hero-note {
+    margin-top: 25px;
+    font-size: .78rem;
+    color: var(--muted);
+}
+
+/* PROMO STRIP */
+.promo-strip {
+    background: var(--bg-card);
+    border-top: 1px solid rgba(223, 193, 141, 0.1);
+    border-bottom: 1px solid rgba(223, 193, 141, 0.1);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.promo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.promo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--gold-light);
+}
+
+/* QUEM SOMOS */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 490px;
+    position: relative;
+    background:
+        url('https://unsplash.com')
+        center / cover no-repeat;
+    border: 1px solid rgba(223, 193, 141, 0.2);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--bg-card);
+    border: 1px solid rgba(223, 193, 141, 0.3);
+    padding: 22px;
+    max-width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.image-caption strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+}
+
+.image-caption span {
+    font-size: .78rem;
+    color: var(--muted);
+}
+
+.about-text h2 {
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+    margin: 14px 0 23px;
+}
+
+.about-text p {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.check-list {
+    list-style: none;
+    margin: 25px 0 30px;
+}
+
+.check-list li {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    font-size: .92rem;
+}
+
+.check-list li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* BENEFÍCIOS */
+.benefits {
+    background: var(--bg-card);
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.benefit-card {
+    background: var(--bg-dark);
+    padding: 35px 28px;
+    border: 1px solid rgba(223, 193, 141, 0.1);
+    transition: .3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.benefit-icon {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.benefit-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 13px;
+}
+
+.benefit-card p {
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+/* ANTES E DEPOIS */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(223, 193, 141, 0.1);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.gallery-img-box {
+    position: relative;
+}
+
+.gallery-img-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.img-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(15, 15, 17, 0.8);
+    color: var(--gold-light);
+    padding: 3px 8px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(223, 193, 141, 0.3);
+}
+
+.gallery-item h3 {
+    font-size: 1.15rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* FAQ */
+.faq-section {
+    background: var(--bg-card);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(223, 193, 141, 0.1);
+}
+
+details {
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+summary {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--gold);
+    transition: 0.3s;
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+details p {
+    margin-top: 15px;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+    background: var(--bg-dark);
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(223, 193, 141, 0.1);
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: var(--gold-light);
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.social-btn:hover {
+    color: var(--gold-light);
+}
+
+.footer-bottom {
+    text-align: center;
