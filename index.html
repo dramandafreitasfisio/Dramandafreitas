@@ -3,309 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AF Estética Avançada - Botox</title>
-    <!-- Google Fonts: Playfair Display para títulos e Montserrat para textos -->
+    <title>AF Estética Avançada - Botox Premium</title>
+    <!-- Fontes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome para ícones elegantes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-gold: #D4AF37;
-            --dark-gold: #AA7C11;
-            --light-gold: #F3E5AB;
-            --pure-white: #FFFFFF;
-            --off-white: #FAF9F6;
-            --soft-gray: #F4F4F4;
-            --charcoal: #2C2C2C;
-            --text-gray: #555555;
-            --font-title: 'Playfair Display', serif;
-            --font-body: 'Montserrat', sans-serif;
+            --branco: #ffffff;
+            --off-white: #fcfbfa;
+            --dourado-claro: #f3e5ab;
+            --dourado-medio: #d4af37;
+            --dourado-profundo: #aa7c11;
+            --grafite: #1c1c1c;
+            --cinza-claro: #f4f4f4;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: var(--font-body);
-            color: var(--charcoal);
-            background-color: var(--pure-white);
+            background-color: var(--branco);
+            color: var(--grafite);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* HEADER */
+        /* Tipografia */
+        h1, h2, h3, .brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Cabeçalho */
         header {
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 20px 4%;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(212, 175, 55, 0.1);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            backdrop-filter: blur(10px);
+            padding: 0 20px;
         }
 
-        .logo {
-            font-family: var(--font-title);
-            font-size: 1.6rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: var(--dark-gold);
+        .brand {
+            font-size: 1.5rem;
+            color: var(--dourado-profundo);
             text-decoration: none;
         }
 
-        .logo span {
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            display: block;
-            letter-spacing: 4px;
-            font-weight: 300;
-            color: var(--charcoal);
-            margin-top: -2px;
+        .nav-links a {
+            color: var(--grafite);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: color 0.3s;
         }
 
-        /* HERO SECTION */
+        .nav-links a:hover {
+            color: var(--dourado-medio);
+        }
+
+        /* Banner Principal / Hero */
         .hero {
-            position: relative;
-            min-height: 100vh;
-            padding: 140px 4% 80px 4%;
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(255,255,255,0.92) 40%, rgba(243,229,171,0.15) 100%), 
-                        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
         }
 
         .hero-content {
-            max-width: 650px;
-        }
-
-        .hero-tagline {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--dark-gold);
-            font-weight: 600;
-            margin-bottom: 15px;
+            max-width: 800px;
+            color: var(--branco);
         }
 
         .hero h1 {
-            font-family: var(--font-title);
-            font-size: 3.2rem;
-            line-height: 1.2;
-            color: var(--charcoal);
-            margin-bottom: 25px;
-            font-weight: 400;
-        }
-
-        .hero h1 em {
-            font-family: var(--font-title);
-            color: var(--primary-gold);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dourado-claro);
         }
 
         .hero p {
-            font-size: 1.1rem;
-            color: var(--text-gray);
-            margin-bottom: 40px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
             font-weight: 300;
         }
 
-        /* BUTTONS */
+        /* Botões */
         .btn-gold {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
-            color: var(--pure-white);
-            padding: 16px 35px;
-            border-radius: 50px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--dourado-claro), var(--dourado-medio), var(--dourado-profundo));
+            color: var(--branco);
+            padding: 15px 35px;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 1px;
-            font-size: 0.95rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            transition: all 0.3s ease;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .btn-gold:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-            background: linear-gradient(135deg, var(--dark-gold), var(--primary-gold));
         }
 
-        /* SECTION ABSTRACTS */
+        /* Seções Gerais */
         section {
-            padding: 100px 4%;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .section-header {
+        .section-title {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px auto;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: var(--dourado-profundo);
+            position: relative;
         }
 
-        .section-header h2 {
-            font-family: var(--font-title);
-            font-size: 2.5rem;
-            color: var(--charcoal);
-            font-weight: 400;
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--dourado-medio);
+            margin: 15px auto 0;
+        }
+
+        /* Seção Benefícios */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background-color: var(--off-white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--dourado-medio);
+        }
+
+        .benefit-card h3 {
+            color: var(--dourado-profundo);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Seção Promocional */
+        .promo-section {
+            background-color: var(--off-white);
+            border: 2px dashed var(--dourado-medio);
+            border-radius: 12px;
+            padding: 50px 40px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.05);
+        }
+
+        .promo-section h2 {
+            color: var(--dourado-profundo);
             margin-bottom: 15px;
         }
 
-        .section-header h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: var(--primary-gold);
-            margin: 15px auto 0 auto;
-        }
-
-        .section-header p {
-            color: var(--text-gray);
-            font-size: 1rem;
-            font-weight: 300;
-        }
-
-        /* PROMO BANNER */
-        .promo-banner {
-            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-            color: var(--pure-white);
-            text-align: center;
-            padding: 60px 4%;
-            position: relative;
-            border-top: 3px solid var(--primary-gold);
-            border-bottom: 3px solid var(--primary-gold);
-        }
-
-        .promo-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .promo-section p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--grafite);
         }
 
         .promo-badge {
-            background-color: var(--primary-gold);
-            color: #1a1a1a;
-            padding: 6px 15px;
+            display: inline-block;
+            background-color: var(--dourado-profundo);
+            color: var(--branco);
+            padding: 5px 15px;
+            border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            display: inline-block;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-
-        .promo-banner h3 {
-            font-family: var(--font-title);
-            font-size: 2rem;
-            color: var(--light-gold);
             margin-bottom: 15px;
-            font-weight: 400;
         }
 
-        .promo-banner p {
-            font-weight: 300;
-            color: #e0e0e0;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        /* BENEFITS SECTION */
-        .benefits {
-            background-color: var(--off-white);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .benefits-img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 20px 20px 0px var(--light-gold);
-        }
-
-        .benefit-item {
-            margin-bottom: 30px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .benefit-icon {
-            color: var(--dark-gold);
-            font-size: 1.5rem;
-            margin-top: 4px;
-        }
-
-        .benefit-text h4 {
-            font-family: var(--font-title);
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-            font-weight: 400;
-        }
-
-        .benefit-text p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            font-weight: 300;
-        }
-
-        /* BEFORE & AFTER */
+        /* Antes e Depois */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
 
-        .gallery-card {
-            background: var(--pure-white);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+        .gallery-item {
+            background-color: var(--branco);
+            border: 1px solid #eee;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
-        .gallery-images {
+        .image-comparison {
             display: flex;
-            position: relative;
         }
 
-        .gallery-img-box {
+        .image-side {
             width: 50%;
             position: relative;
         }
 
-        .gallery-img-box img {
+        .image-side img {
             width: 100%;
-            height: 350px;
+            height: 250px;
             object-fit: cover;
             display: block;
         }
 
-        .img-label {
+        .image-label {
             position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 4px 10px;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.6);
+            color: var(--branco);
+            padding: 3px 10px;
             font-size: 0.75rem;
+            border-radius: 3px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 4px;
         }
 
         .gallery-info {
@@ -313,87 +267,75 @@
             text-align: center;
         }
 
-        .gallery-info h4 {
-            font-family: var(--font-title);
-            font-size: 1.2rem;
-            color: var(--charcoal);
-            font-weight: 400;
+        .gallery-info p {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
         }
 
-        /* QUEM SOMOS */
-        .about {
+        /* Quem Somos */
+        .about-bg {
             background-color: var(--off-white);
-            display: grid;
-            grid-template-columns: 1fr 120px 1fr;
+            width: 100%;
+        }
+
+        .about-container {
+            display: flex;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 4%;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--dourado-claro);
+            box-shadow: 10px 10px 0px var(--dourado-medio);
         }
 
         .about-text {
-            grid-column: 1;
-        }
-
-        .about-text h3 {
-            font-family: var(--font-title);
-            font-size: 2.2rem;
-            color: var(--charcoal);
-            margin-bottom: 20px;
-            font-weight: 400;
+            flex: 12;
+            min-width: 300px;
         }
 
         .about-text p {
-            color: var(--text-gray);
-            font-size: 1rem;
-            font-weight: 300;
             margin-bottom: 20px;
+            color: #444;
         }
 
-        .about-img-container {
-            grid-column: 3;
-            position: relative;
-        }
-
-        .about-img {
-            width: 100%;
-            height: 550px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: -15px 15px 0 var(--primary-gold);
-        }
-
-        /* FAQ (ACCORDION) */
+        /* FAQ (Perguntas Frequentes) */
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
 
         details {
-            background-color: var(--pure-white);
+            background-color: var(--branco);
             border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 5px;
             margin-bottom: 15px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
+            padding: 15px 20px;
+            transition: all 0.3s;
         }
 
         details[open] {
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
-            border-color: var(--primary-gold);
+            border-color: var(--dourado-medio);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.08);
         }
 
         summary {
-            padding: 20px;
-            font-family: var(--font-title);
-            font-size: 1.15rem;
-            color: var(--charcoal);
+            font-weight: 600;
+            color: var(--grafite);
             cursor: pointer;
+            outline: none;
             list-style: none;
             position: relative;
-            font-weight: 400;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding-right: 25px;
         }
 
         summary::-webkit-details-marker {
@@ -401,344 +343,232 @@
         }
 
         summary::after {
-            content: '078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            font-size: 0.9rem;
-            color: var(--primary-gold);
-            transition: transform 0.3s ease;
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--dourado-profundo);
+            font-size: 1.2rem;
+            transition: transform 0.3s;
         }
 
         details[open] summary::after {
-            transform: rotate(180deg);
+            content: '−';
         }
 
-        .faq-content {
-            padding: 0 20px 20px 20px;
-            color: var(--text-gray);
+        details p {
+            margin-top: 15px;
+            color: #555;
             font-size: 0.95rem;
-            font-weight: 300;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-top: 1px solid #eee;
             padding-top: 15px;
         }
 
-        /* FOOTER */
+        /* Rodapé */
         footer {
-            background-color: #1a1a1a;
-            color: var(--pure-white);
-            padding: 60px 4% 30px 4%;
+            background-color: var(--grafite);
+            color: var(--branco);
+            padding: 60px 20px 20px;
             text-align: center;
-            border-top: 2px solid var(--primary-gold);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .footer-logo {
-            font-family: var(--font-title);
+            font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            color: var(--light-gold);
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            color: var(--dourado-claro);
+            margin-bottom: 15px;
         }
 
-        .footer-logo span {
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            color: #b0b0b0;
-            display: block;
-            letter-spacing: 4px;
-            margin-top: 2px;
-        }
-
-        .footer-contact {
-            margin: 25px 0;
-            font-weight: 300;
-            color: #ccc;
-        }
-
-        .footer-contact p {
-            margin-bottom: 8px;
-        }
-
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .social-icon {
-            display: flex;
+        .footer-instagram {
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            color: var(--light-gold);
+            color: var(--dourado-claro);
             text-decoration: none;
-            font-size: 0.95rem;
-            border: 1px solid rgba(243,229,171,0.3);
-            padding: 10px 22px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-top: 20px;
+            border: 1px solid var(--dourado-medio);
+            padding: 10px 25px;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
 
-        .social-icon:hover {
-            background-color: var(--primary-gold);
-            color: #1a1a1a;
-            border-color: var(--primary-gold);
-            transform: translateY(-2px);
+        .footer-instagram:hover {
+            background-color: var(--dourado-medio);
+            color: var(--grafite);
         }
 
-        .copyright {
+        .footer-bottom {
             font-size: 0.8rem;
-            color: #777;
-            border-top: 1px solid #2a2a2a;
-            padding-top: 25px;
+            color: #888;
         }
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 992px) {
-            .benefits {
-                grid-template-columns: 1fr;
-            }
-            .benefits-img {
-                height: 350px;
-                order: -1;
-            }
-            .about {
-                grid-template-columns: 1fr;
-            }
-            .about-img-container {
-                grid-column: 1;
-                margin-top: 50px;
-            }
-            .about-img {
-                height: 400px;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .gallery-images {
-                flex-direction: column;
-            }
-            .gallery-img-box {
-                width: 100%;
-            }
-            .gallery-img-box img {
-                height: 260px;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+            .header-container { flex-direction: column; gap: 10px; }
+            .nav-links a { margin: 0 10px; }
+            .about-container { flex-direction: column-reverse; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- Cabeçalho -->
     <header>
-        <a href="#" class="logo">
-            AF
-            <span>ESTÉTICA AVANÇADA</span>
-        </a>
-        <a href="https://wa.me/5561983295044?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+na+AF+Est%C3%A9tica+Avan%C3%A7ada." target="_blank" class="btn-gold" style="padding: 10px 20px; font-size: 0.85rem;">
-            <i class="fab fa-whatsapp"></i> Agendar
-        </a>
+        <div class="header-container">
+            <a href="#" class="brand">AF Estética Avançada</a>
+            <nav class="nav-links">
+                <a href="#beneficios">Benefícios</a>
+                <a href="#promocao">Promoção</a>
+                <a href="#antes-depois">Resultados</a>
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#faq">Dúvidas</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- Banner Principal -->
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-tagline">Gerenciamento do Envelhecimento</p>
-            <h1>Sua beleza natural, <em>sutilmente realçada</em>.</h1>
-            <p>Descubra o poder da Toxina Botulínica de alta performance na AF Estética Avançada. Suavize linhas de expressão e previna marcas do tempo com total segurança, elegância e a naturalidade que seu rosto merece.</p>
-            <a href="https://wa.me/5561983295044?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+na+AF+Est%C3%A9tica+Avan%C3%A7ada." target="_blank" class="btn-gold">
-                <i class="fab fa-whatsapp"></i> Agendar Avaliação Gratuita
-            </a>
+            <h1>Sua beleza realçada com naturalidade e elegância</h1>
+            <p>Descubra o poder do Botox Preventivo e Reparador na AF Estética Avançada. Suavize linhas de expressão com a precisão e a segurança que o seu rosto merece.</p>
+            <a href="https://wa.me/5561983295044?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20AF%20Estética%20Avançada." class="btn-gold" target="_blank">Agendar Avaliação Gratuita</a>
         </div>
     </section>
 
-    <!-- PROMO BANNER -->
-    <div class="promo-banner">
-        <div class="promo-container">
-            <span class="promo-badge">Condição Especial</span>
-            <h3>Valores Promocionais de Temporada</h3>
-            <p>Estamos com condições exclusivas e valores promocionais imperdíveis para o procedimento de Botox neste mês. Celebre a melhor versão da sua pele.</p>
-            <a href="https://wa.me/5561983295044?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+valores+promocionais+do+Botox." target="_blank" class="btn-gold">
-                <i class="fab fa-whatsapp"></i> Consultar Condições Especiais
-            </a>
+    <!-- Benefícios -->
+    <section id="beneficios">
+        <h2 class="section-title">Por que investir no Botox?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Suavização de Rugas</h3>
+                <p>Atenua as linhas na testa, ao redor dos olhos ("pés de galinha") e entre as sobrancelhas de forma precisa.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Ação Preventiva</h3>
+                <p>Evita que as linhas dinâmicas da expressão se tornem rugas profundas e estáticas na pele no futuro.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Resultados Naturais</h3>
+                <p>Nosso foco absoluto é realçar sua melhor versão de forma leve, sem perder sua expressividade original.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- Seção Promocional -->
+    <section id="promocao" style="padding-top: 0; padding-bottom: 40px;">
+        <div class="promo-section">
+            <span class="promo-badge">Oportunidade Especial</span>
+            <h2>Condições Exclusivas Este Mês</h2>
+            <p>Estamos com valores promocionais imperdíveis para o procedimento de aplicação de Botox. Venha cuidar da sua autoestima com condições diferenciadas e por tempo limitado.</p>
+            <a href="https://wa.me/5561983295044?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20AF%20Estética%20Avançada." class="btn-gold" target="_blank">Consultar Valores Promocionais</a>
+        </div>
+    </section>
+
+    <!-- Antes e Depois -->
+    <section id="antes-depois">
+        <h2 class="section-title">Galeria de Resultados</h2>
+        <div class="gallery-grid">
+            <!-- Exemplo 1 -->
+            <div class="gallery-item">
+                <div class="image-comparison">
+                    <div class="image-side">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop" alt="Antes do Botox">
+                        <span class="image-label">Antes</span>
+                    </div>
+                    <div class="image-side">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop" alt="Depois do Botox">
+                        <span class="image-label">Depois</span>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <p>Suavização completa de linhas na região da testa.</p>
+                </div>
+            </div>
+            <!-- Exemplo 2 -->
+            <div class="gallery-item">
+                <div class="image-comparison">
+                    <div class="image-side">
+                        <img src="https://images.unsplash.com/photo-1614859324967-bdf461fcf769?q=80&w=600&auto=format&fit=crop" alt="Antes do procedimento">
+                        <span class="image-label">Antes</span>
+                    </div>
+                    <div class="image-side">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop" alt="Depois do procedimento">
+                        <span class="image-label">Depois</span>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <p>Redução das linhas de expressão ao redor dos olhos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <div class="about-bg" id="quem-somos">
+        <section class="about-container">
+            <div class="about-text">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 30px; padding-left: 0;">Quem Somos</h2>
+                <p>A <strong>AF Estética Avançada</strong> nasceu do desejo de integrar ciência, saúde e beleza em um ambiente acolhedor e altamente sofisticado.</p>
+                <p>Sob a coordenação técnica e o olhar clínico minucioso da <strong>Dra. Amanda Freitas</strong>, nos dedicamos a entregar tratamentos minimamente invasivos com o mais alto padrão de excelência, segurança e insumos de marcas mundialmente reconhecidas.</p>
+                <p>Aqui, entendemos que cada face possui uma história e proporções únicas. Por isso, nosso atendimento começa sempre por uma avaliação criteriosa para desenhar um plano de aplicação individualizado, garantindo resultados refinados, harmônicos e muito elegantes.</p>
+                <a href="https://wa.me/5561983295044?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20AF%20Estética%20Avançada." class="btn-gold" style="margin-top: 10px;" target="_blank">Falar Conosco</a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop" alt="Dra. Amanda Freitas - AF Estética">
+            </div>
+        </section>
     </div>
 
-    <!-- BENEFITS SECTION -->
-    <section class="benefits">
-        <div class="benefits-content">
-            <div style="margin-bottom: 40px;">
-                <p style="color: var(--dark-gold); font-weight:600; text-transform:uppercase; letter-spacing:2px; font-size:0.85rem; margin-bottom:10px;">Por que fazer?</p>
-                <h2 style="font-family:var(--font-title); font-size:2.3rem; font-weight:400;">Os Benefícios do Botox</h2>
-            </div>
-            
-            <div class="benefit-item">
-                <i class="fa-regular fa-circle-check benefit-icon"></i>
-                <div class="benefit-text">
-                    <h4>Suavização de Rugas Dinâmicas</h4>
-                    <p>Ameniza de forma imediata e eficaz as rugas na testa, glabela (entre as sobrancelhas) e os famosos "pés de galinha".</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
-                <i class="fa-regular fa-circle-check benefit-icon"></i>
-                <div class="benefit-text">
-                    <h4>Prevenção Eficiente</h4>
-                    <p>Atua paralisando preventivamente a musculatura hiperativa, impedindo que as linhas finas se tornem vincos profundos e permanentes.</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
-                <i class="fa-regular fa-circle-check benefit-icon"></i>
-                <div class="benefit-text">
-                    <h4>Gerenciamento Natural do Tempo</h4>
-                    <p>Diga adeus ao aspecto cansado ou bravo. O olhar ganha um aspecto mais descansado, jovem e revigorado sem perder a expressividade.</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
-                <i class="fa-regular fa-circle-check benefit-icon"></i>
-                <div class="benefit-text">
-                    <h4>Procedimento Rápido e Seguro</h4>
-                    <p>Realizado em poucos minutos, minimamente invasivo e com retorno imediato às suas atividades cotidianas.</p>
-                </div>
-            </div>
-        </div>
-        <img class="benefits-img" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop" alt="Cuidados com a pele">
-    </section>
-
-    <!-- BEFORE & AFTER SECTION -->
-    <section class="before-after">
-        <div class="section-header">
-            <h2>Resultados e Evolução</h2>
-            <p>Resultados reais focados em simetria e refinamento estético. Veja exemplos clássicos da atuação e evolução da Toxina Botulínica.</p>
-        </div>
-
-        <div class="gallery-grid">
-            <!-- Caso 1 -->
-            <div class="gallery-card">
-                <div class="gallery-images">
-                    <div class="gallery-img-box">
-                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=500&auto=format&fit=crop" alt="Região da testa antes do Botox">
-                        <span class="img-label">Antes</span>
-                    </div>
-                    <div class="gallery-img-box">
-                        <img src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?q=80&w=500&auto=format&fit=crop" alt="Região da testa após o Botox">
-                        <span class="img-label" style="background-color: var(--dark-gold);">Depois</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h4>Linhas da Testa e Glabela</h4>
-                </div>
-            </div>
-
-            <!-- Caso 2 -->
-            <div class="gallery-card">
-                <div class="gallery-images">
-                    <div class="gallery-img-box">
-                        <img src="https://images.unsplash.com/photo-1596941031863-718684bb649c?q=80&w=500&auto=format&fit=crop" alt="Área dos olhos antes do Botox">
-                        <span class="img-label">Antes</span>
-                    </div>
-                    <div class="gallery-img-box">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=500&auto=format&fit=crop" alt="Área dos olhos após o Botox">
-                        <span class="img-label" style="background-color: var(--dark-gold);">Depois</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h4>Suavização de "Pés de Galinha"</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUEM SOMOS -->
-    <section class="about">
-        <div class="about-text">
-            <p style="color: var(--dark-gold); font-weight:600; text-transform:uppercase; letter-spacing:2px; font-size:0.85rem; margin-bottom:10px;">Excelência e Ciência</p>
-            <h3>Quem Somos</h3>
-            <p>A <strong>AF Estética Avançada</strong> nasceu do desejo de unir ciência, tecnologia e sensibilidade artística para entregar o mais alto padrão em gerenciamento do envelhecimento cutâneo e harmonização facial.</p>
-            <p>Sob a liderança técnica e o olhar criterioso da <strong>Dra. Amanda Freitas</strong>, cada paciente passa por uma criteriosa avaliação anatômica individual. Nós acreditamos que a verdadeira estética de luxo não transforma você em outra pessoa, mas devolve o viço, o descanso e o frescor que o tempo suavizou.</p>
-            <p>Aqui, priorizamos materiais de marcas referências mundiais e técnicas validadas para garantir uma experiência confortável, segura e com resultados visivelmente refinados.</p>
-        </div>
-        <div></div> <!-- Spacer para o grid -->
-        <div class="about-img-container">
-            <img class="about-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Dra Amanda Freitas - AF Estética Avançada">
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq">
-        <div class="section-header">
-            <h2>Dúvidas Frequentes</h2>
-            <p>Esclareça os principais pontos sobre o tratamento com Toxina Botulínica.</p>
-        </div>
-
+    <!-- FAQ -->
+    <section id="faq">
+        <h2 class="section-title">Perguntas Frequentes</h2>
         <div class="faq-container">
             <details>
                 <summary>Quanto tempo dura o efeito do Botox?</summary>
-                <div class="faq-content">
-                    O tempo de duração varia de acordo com o metabolismo de cada organismo, estilo de vida e força muscular do paciente, durando em média de 3 a 5 meses. À medida que o produto é absorvido, a mobilidade muscular retorna gradativamente.
-                </div>
+                <p>O tempo de duração varia entre 4 a 6 meses, dependendo do metabolismo de cada paciente, da força muscular da região tratada e da rotina de atividades físicas intensas.</p>
             </details>
-
             <details>
                 <summary>O procedimento é doloroso?</summary>
-                <div class="faq-content">
-                    A aplicação é considerada muito tranquila e suportável. Utilizamos agulhas extremamente finas (específicas para procedimentos faciais) e aplicamos anestésicos tópicos locais e resfriamento da pele antes das picadas para garantir o máximo conforto.
-                </div>
+                <p>A aplicação é considerada muito tranquila e suportável. Utilizamos agulhas extremamente finas (específicas para estética) e aplicamos um anestésico tópico premium minutos antes para garantir o máximo de conforto.</p>
             </details>
-
             <details>
                 <summary>Vou ficar com o rosto congelado ou artificial?</summary>
-                <div class="faq-content">
-                    Não. Na AF Estética Avançada, nossa assinatura de trabalho é a naturalidade. A dosagem e os pontos de aplicação são planejados meticulosamente respeitando a sua mímica facial para que você continue expressiva, apenas com um aspecto descansado e rejuvenescido.
-                </div>
+                <p>Não. Na AF Estética Avançada priorizamos a naturalidade. A dosagem é milimetricamente calculada de acordo com o seu músculo para suavizar as rugas mantendo sua expressividade natural.</p>
             </details>
-
             <details>
-                <summary>Quanto tempo demora para aparecer o resultado definitivo?</summary>
-                <div class="faq-content">
-                    Os primeiros efeitos começam a ser notados entre 48h e 72h após a aplicação. O resultado máximo e definitivo é atingido por volta do 14º ao 15º dia, momento em que geralmente realizamos uma consulta de retorno para avaliar a necessidade de pequenos retoques.
-                </div>
+                <summary>Quanto tempo demora para aparecer o resultado?</summary>
+                <p>Os primeiros efeitos começam a ser notados entre o 2º e o 5º dia após a aplicação. O resultado final e completo se consolida em até 15 dias, quando realizamos uma consulta de retorno.</p>
             </details>
-
             <details>
-                <summary>Quais são os cuidados logo após a aplicação?</summary>
-                <div class="faq-content">
-                    As recomendações principais para as primeiras 4 horas após o procedimento são: não deitar de bruços ou de lado, evitar massagear ou esfregar vigorosamente o rosto, e não realizar atividades físicas intensas no dia da aplicação.
-                </div>
+                <summary>Quais são os cuidados após a aplicação?</summary>
+                <p>Nas primeiras 4 horas após o procedimento, é fundamental não deitar, não abaixar a cabeça e evitar massagear o rosto. Também orientamos suspender atividades físicas intensas no dia da aplicação.</p>
             </details>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Rodapé -->
     <footer>
-        <div class="footer-logo">
-            AF
-            <span>ESTÉTICA AVANÇADA</span>
-        </div>
-        
-        <div class="footer-contact">
-            <p><i class="fas fa-phone-alt" style="color: var(--primary-gold); margin-right: 8px;"></i> (61) 98329-5044</p>
-            <p><i class="fas fa-map-marker-alt" style="color: var(--primary-gold); margin-right: 8px;"></i> Atendimento Presencial • Brasília - DF</p>
-        </div>
-
-        <div class="footer-socials">
-            <a href="https://wa.me/5561983295044?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o." target="_blank" class="social-icon">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="https://instagram.com/dra_amandafreitas" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i> @dra_amandafreitas
+        <div class="footer-content">
+            <div class="footer-logo">AF Estética Avançada</div>
+            <p>Atendimento Personalizado com Hora Marcada</p>
+            <p>Contato: (61) 98329-5044</p>
+            <a href="https://www.instagram.com/dra_amandafreitas" class="footer-instagram" target="_blank">
+                @dra_amandafreitas
             </a>
         </div>
-
-        <div class="copyright">
-            &copy; 2026 AF Estética Avançada. Todos os direitos reservados.
+        <div class="footer-bottom">
+            <p>&copy; 2027 AF Estética Avançada. Todos os direitos reservados. Landing Page de Alta Conversão.</p>
         </div>
     </footer>
 
